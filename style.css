@@ -1,0 +1,1597 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+    --bg:
+        #020405;
+
+    --white:
+        #f5f7f9;
+
+    --muted:
+        #777d84;
+
+    --muted-light:
+        #a1a6ad;
+
+    --border:
+        rgba(255, 255, 255, 0.10);
+
+    --border-soft:
+        rgba(255, 255, 255, 0.065);
+
+    --blue:
+        #1da9e8;
+
+    --blue-light:
+        #27b9f4;
+
+    --blue-dark:
+        #1387c8;
+
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+html {
+    min-height: 100%;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        var(--bg);
+
+    color:
+        var(--white);
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing:
+        antialiased;
+
+    text-rendering:
+        optimizeLegibility;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: -10;
+
+    background:
+
+        radial-gradient(
+            ellipse at 50% 15%,
+            rgba(0, 132, 255, 0.075),
+            transparent 42%
+        ),
+
+        radial-gradient(
+            ellipse at 50% 80%,
+            rgba(0, 191, 255, 0.025),
+            transparent 45%
+        ),
+
+        #020405;
+
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255, 255, 255, 0.034) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.034) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        48px 48px;
+
+    opacity:
+        0.62;
+
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 10%,
+            rgba(0,0,0,0.85) 48%,
+            transparent 100%
+        );
+
+}
+
+
+/* =========================================================
+   AMBIENT GLOWS
+========================================================= */
+
+.glow {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter:
+        blur(100px);
+
+    pointer-events: none;
+
+}
+
+
+.glow-blue {
+
+    width: 430px;
+
+    height: 430px;
+
+    top: 5%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        rgba(0, 130, 255, 0.075);
+
+}
+
+
+.glow-cyan {
+
+    width: 260px;
+
+    height: 260px;
+
+    bottom: 5%;
+
+    right: -100px;
+
+    background:
+        rgba(0, 210, 255, 0.045);
+
+}
+
+
+/* =========================================================
+   SUBTLE NOISE
+========================================================= */
+
+.noise {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity:
+        0.025;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+
+    width: 100%;
+
+    padding-top:
+        18px;
+
+    text-align:
+        center;
+
+}
+
+
+.brand {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        13px;
+
+}
+
+
+.brand-name {
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        16px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        2.4px;
+
+    color:
+        #eeeeef;
+
+}
+
+
+.brand-line {
+
+    width:
+        38px;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #555b61
+        );
+
+}
+
+
+.brand-line.right {
+
+    background:
+        linear-gradient(
+            90deg,
+            #555b61,
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main {
+
+    width:
+        100%;
+
+    max-width:
+        590px;
+
+    min-height:
+        calc(100vh - 65px);
+
+    margin:
+        0 auto;
+
+    padding:
+        28px 18px 22px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+
+}
+
+
+/* =========================================================
+   LIVE BADGE
+========================================================= */
+
+.live-badge {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        8px 15px;
+
+    border:
+        1px solid
+        rgba(0, 178, 255, 0.42);
+
+    border-radius:
+        8px;
+
+    background:
+        rgba(0, 110, 190, 0.035);
+
+    color:
+        #20b8f4;
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        11px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        0.8px;
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(0, 150, 255, 0.025);
+
+}
+
+
+/* LIVE DOT */
+
+.live-dot {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    flex:
+        0 0 auto;
+
+    border-radius:
+        50%;
+
+    background:
+        #1cbaff;
+
+    box-shadow:
+        0 0 7px #1cbaff,
+        0 0 15px
+        rgba(28, 186, 255, 0.35);
+
+    animation:
+        livePulse 2s ease-in-out infinite;
+
+}
+
+
+@keyframes livePulse {
+
+    0%,
+    100% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        opacity:
+            0.45;
+
+        transform:
+            scale(0.78);
+
+    }
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.channel-logo {
+
+    margin-top:
+        18px;
+
+}
+
+
+.logo-ring {
+
+    width:
+        70px;
+
+    height:
+        70px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 25%,
+            #20252a,
+            #0b0d0f 67%
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+
+    box-shadow:
+
+        0 0 0 5px
+        rgba(255, 255, 255, 0.012),
+
+        0 0 30px
+        rgba(0, 151, 255, 0.12),
+
+        inset 0 0 20px
+        rgba(255, 255, 255, 0.035);
+
+}
+
+
+.logo-inner {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+}
+
+
+.spider {
+
+    display:
+        block;
+
+    font-size:
+        31px;
+
+    line-height:
+        1;
+
+    filter:
+        drop-shadow(
+            0 0 9px
+            rgba(133, 87, 255, 0.35)
+        );
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    margin-top:
+        15px;
+
+}
+
+
+.hero h1 {
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        clamp(
+            50px,
+            9vw,
+            72px
+        );
+
+    font-weight:
+        500;
+
+    line-height:
+        0.88;
+
+    letter-spacing:
+        -4px;
+
+    color:
+        #ffffff;
+
+}
+
+
+.hero h1 span {
+
+    color:
+        #858a91;
+
+    font-weight:
+        400;
+
+}
+
+
+.hero-description {
+
+    max-width:
+        470px;
+
+    margin:
+        16px auto 0;
+
+    color:
+        #777d84;
+
+    font-size:
+        13px;
+
+    font-weight:
+        500;
+
+    line-height:
+        1.55;
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+
+    width:
+        100%;
+
+    margin-top:
+        22px;
+
+    overflow:
+        hidden;
+
+    text-align:
+        left;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 17, 18, 0.94),
+            rgba(6, 7, 8, 0.94)
+        );
+
+    box-shadow:
+
+        0 18px 50px
+        rgba(0, 0, 0, 0.32),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.025);
+
+}
+
+
+/* FEATURE */
+
+.feature {
+
+    min-height:
+        70px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    padding:
+        13px 17px;
+
+    border-bottom:
+        1px solid
+        var(--border-soft);
+
+    transition:
+        background 0.25s ease;
+
+}
+
+
+.feature:last-child {
+
+    border-bottom:
+        none;
+
+}
+
+
+.feature:hover {
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+}
+
+
+/* ICON */
+
+.feature-icon {
+
+    width:
+        39px;
+
+    min-width:
+        39px;
+
+    height:
+        39px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        10px;
+
+    color:
+        #aeb5bd;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17191b,
+            #0d0f10
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.035);
+
+}
+
+
+/* FEATURE CONTENT */
+
+.feature-content {
+
+    min-width:
+        0;
+
+}
+
+
+.feature-content h3 {
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        -0.15px;
+
+    color:
+        #f0f1f2;
+
+    margin-bottom:
+        3px;
+
+}
+
+
+.feature-content p {
+
+    font-size:
+        11.5px;
+
+    font-weight:
+        500;
+
+    line-height:
+        1.4;
+
+    color:
+        #73787e;
+
+}
+
+
+/* =========================================================
+   TELEGRAM BUTTON
+========================================================= */
+
+.telegram-button {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        55px;
+
+    margin-top:
+        18px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #27afe5,
+            #168fd1
+        );
+
+    color:
+        #ffffff;
+
+    text-decoration:
+        none;
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        15px;
+
+    font-weight:
+        600;
+
+    box-shadow:
+
+        0 10px 28px
+        rgba(21, 154, 218, 0.20),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.25);
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease;
+
+}
+
+
+/* SHINE */
+
+.telegram-button::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -110%;
+
+    width:
+        65%;
+
+    height:
+        100%;
+
+    transform:
+        skewX(-20deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.18),
+            transparent
+        );
+
+    transition:
+        left 0.6s ease;
+
+}
+
+
+.telegram-button:hover::before {
+
+    left:
+        135%;
+
+}
+
+
+.telegram-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+
+        0 15px 36px
+        rgba(21, 154, 218, 0.28),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.25);
+
+}
+
+
+.telegram-icon {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+}
+
+
+.button-arrow {
+
+    font-size:
+        18px;
+
+    margin-left:
+        2px;
+
+    transition:
+        transform 0.22s ease;
+
+}
+
+
+.telegram-button:hover
+.button-arrow {
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* =========================================================
+   SOCIAL PROOF
+========================================================= */
+
+.social-proof {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    margin-top:
+        12px;
+
+    color:
+        #73787f;
+
+    font-size:
+        11.5px;
+
+    font-weight:
+        500;
+
+}
+
+
+/* AVATARS */
+
+.avatars {
+
+    display:
+        flex;
+
+    padding-left:
+        3px;
+
+}
+
+
+.avatars div {
+
+    width:
+        25px;
+
+    height:
+        25px;
+
+    margin-left:
+        -5px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        #41464b;
+
+    border-radius:
+        50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #292d31,
+            #151719
+        );
+
+    color:
+        #c9cdd1;
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+}
+
+
+.avatars div:first-child {
+
+    margin-left:
+        0;
+
+}
+
+
+/* ONLINE DOT */
+
+.online-dot {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        #1da5ed;
+
+    box-shadow:
+        0 0 7px
+        rgba(29, 165, 237, 0.65);
+
+}
+
+
+/* =========================================================
+   CHANNEL LINK
+========================================================= */
+
+.channel-link {
+
+    margin-top:
+        6px;
+
+    color:
+        #349fd5;
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        10.5px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        0.25px;
+
+}
+
+
+/* =========================================================
+   SMALL HEIGHT SCREENS
+   This keeps CTA visible on shorter phones/laptops.
+========================================================= */
+
+@media (max-height: 720px) {
+
+    .header {
+
+        padding-top:
+            12px;
+
+    }
+
+
+    .main {
+
+        padding-top:
+            18px;
+
+        padding-bottom:
+            15px;
+
+    }
+
+
+    .channel-logo {
+
+        margin-top:
+            12px;
+
+    }
+
+
+    .logo-ring {
+
+        width:
+            58px;
+
+        height:
+            58px;
+
+    }
+
+
+    .spider {
+
+        font-size:
+            25px;
+
+    }
+
+
+    .hero {
+
+        margin-top:
+            10px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            48px;
+
+    }
+
+
+    .hero-description {
+
+        margin-top:
+            11px;
+
+    }
+
+
+    .features {
+
+        margin-top:
+            16px;
+
+    }
+
+
+    .feature {
+
+        min-height:
+            58px;
+
+        padding:
+            9px 14px;
+
+    }
+
+
+    .feature-icon {
+
+        width:
+            34px;
+
+        min-width:
+            34px;
+
+        height:
+            34px;
+
+    }
+
+
+    .telegram-button {
+
+        min-height:
+            49px;
+
+        margin-top:
+            13px;
+
+    }
+
+
+    .social-proof {
+
+        margin-top:
+            8px;
+
+    }
+
+
+    .channel-link {
+
+        margin-top:
+            4px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+
+        padding-top:
+            15px;
+
+    }
+
+
+    .brand {
+
+        gap:
+            9px;
+
+    }
+
+
+    .brand-name {
+
+        font-size:
+            13px;
+
+        letter-spacing:
+            1.8px;
+
+    }
+
+
+    .brand-line {
+
+        width:
+            27px;
+
+    }
+
+
+    .main {
+
+        max-width:
+            430px;
+
+        min-height:
+            calc(100vh - 48px);
+
+        padding:
+            24px 15px
+            18px;
+
+    }
+
+
+    .live-badge {
+
+        padding:
+            7px 12px;
+
+        font-size:
+            9.5px;
+
+    }
+
+
+    .channel-logo {
+
+        margin-top:
+            15px;
+
+    }
+
+
+    .logo-ring {
+
+        width:
+            62px;
+
+        height:
+            62px;
+
+    }
+
+
+    .spider {
+
+        font-size:
+            27px;
+
+    }
+
+
+    .hero {
+
+        margin-top:
+            13px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            53px;
+
+        line-height:
+            0.88;
+
+        letter-spacing:
+            -3.5px;
+
+    }
+
+
+    .hero-description {
+
+        max-width:
+            340px;
+
+        margin-top:
+            14px;
+
+        font-size:
+            12px;
+
+        line-height:
+            1.5;
+
+    }
+
+
+    .features {
+
+        margin-top:
+            19px;
+
+        border-radius:
+            13px;
+
+    }
+
+
+    .feature {
+
+        min-height:
+            67px;
+
+        padding:
+            11px 14px;
+
+        gap:
+            12px;
+
+    }
+
+
+    .feature-icon {
+
+        width:
+            36px;
+
+        min-width:
+            36px;
+
+        height:
+            36px;
+
+        border-radius:
+            9px;
+
+    }
+
+
+    .feature-content h3 {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .feature-content p {
+
+        font-size:
+            10.5px;
+
+    }
+
+
+    .telegram-button {
+
+        min-height:
+            52px;
+
+        margin-top:
+            15px;
+
+        border-radius:
+            9px;
+
+        font-size:
+            14px;
+
+    }
+
+
+    .social-proof {
+
+        margin-top:
+            9px;
+
+        font-size:
+            10.5px;
+
+    }
+
+
+    .avatars div {
+
+        width:
+            23px;
+
+        height:
+            23px;
+
+    }
+
+
+    .channel-link {
+
+        margin-top:
+            5px;
+
+        font-size:
+            9.5px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .main {
+
+        padding-left:
+            12px;
+
+        padding-right:
+            12px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            48px;
+
+    }
+
+
+    .hero-description {
+
+        font-size:
+            11px;
+
+    }
+
+
+    .feature {
+
+        min-height:
+            62px;
+
+    }
+
+
+    .feature-content h3 {
+
+        font-size:
+            12px;
+
+    }
+
+
+    .feature-content p {
+
+        font-size:
+            9.5px;
+
+    }
+
+
+    .telegram-button {
+
+        min-height:
+            49px;
+
+        font-size:
+            13px;
+
+    }
+
+}
