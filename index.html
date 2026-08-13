@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+   <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{
+    if(f.fbq)return;
 
-<head>
+    n=f.fbq=function()
+    {
+        n.callMethod
+            ? n.callMethod.apply(n,arguments)
+            : n.queue.push(arguments)
+    };
 
-    <!-- =========================================
-         BASIC SETTINGS
-    ========================================== -->
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)
+}
+(
+    window,
+    document,
+    'script',
+    'https://connect.facebook.net/en_US/fbevents.js'
+);
+
+fbq('init', '3423831294465206');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+    <!-- =========================================================
+         BASIC DOCUMENT SETUP
+    ========================================================== -->
 
     <meta charset="UTF-8">
 
@@ -16,78 +52,95 @@
 
     <meta
         name="description"
-        content="Join VIP Spider Club on Telegram for exclusive updates and community access."
+        content="VIP Spider Club — Daily updates, timely analysis and exclusive Telegram content."
     >
 
-    <meta name="theme-color" content="#07090c">
+    <meta
+        name="keywords"
+        content="VIP Spider Club, Telegram community, daily updates, analysis, information"
+    >
 
-    <meta name="robots" content="index, follow">
+    <meta
+        name="author"
+        content="VIP Spider Club"
+    >
 
-    <title>VIP Spider Club | Join the Community</title>
+    <meta
+        name="theme-color"
+        content="#050708"
+    >
 
+    <meta
+        name="color-scheme"
+        content="dark"
+    >
 
-    <!-- =========================================
-         META PIXEL
-    ========================================== -->
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {
-            if (f.fbq) return;
+    <!-- Prevent telephone number auto-formatting -->
+    <meta
+        name="format-detection"
+        content="telephone=no"
+    >
 
-            n = f.fbq = function()
-            {
-                n.callMethod
-                    ? n.callMethod.apply(n, arguments)
-                    : n.queue.push(arguments);
-            };
+    <!-- =========================================================
+         TITLE
+    ========================================================== -->
 
-            if (!f._fbq)
-            {
-                f._fbq = n;
-            }
-
-            n.push = n;
-            n.loaded = true;
-            n.version = "2.0";
-            n.queue = [];
-
-            t = b.createElement(e);
-            t.async = true;
-            t.src = v;
-
-            s = b.getElementsByTagName(e)[0];
-
-            s.parentNode.insertBefore(t, s);
-
-        }(
-            window,
-            document,
-            "script",
-            "https://connect.facebook.net/en_US/fbevents.js"
-        );
-
-        /* Initialize Pixel */
-
-        fbq(
-            "init",
-            "3423831294465206"
-        );
-
-        /* Track Page View */
-
-        fbq(
-            "track",
-            "PageView"
-        );
-    </script>
-
-    <!-- End Meta Pixel Code -->
+    <title>VIP Spider Club — Stay Ahead</title>
 
 
-    <!-- =========================================
-         PREMIUM GOOGLE FONTS
-    ========================================== -->
+    <!-- =========================================================
+         OPEN GRAPH / SOCIAL SHARING
+    ========================================================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="VIP Spider Club — Stay Ahead"
+    >
+
+    <meta
+        property="og:description"
+        content="Stay ahead with daily updates, timely analysis and exclusive Telegram content."
+    >
+
+    <meta
+        property="og:url"
+        content="https://telegram-landing-page-amber.vercel.app/"
+    >
+
+    <meta
+        property="og:site_name"
+        content="VIP Spider Club"
+    >
+
+    <meta
+        name="twitter:card"
+        content="summary"
+    >
+
+    <meta
+        name="twitter:title"
+        content="VIP Spider Club — Stay Ahead"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Daily updates, timely analysis and exclusive Telegram content."
+    >
+
+
+    <!-- =========================================================
+         PREMIUM FONTS
+    ========================================================== -->
 
     <link
         rel="preconnect"
@@ -101,84 +154,216 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
 
-    <!-- =========================================
-         CSS
-    ========================================== -->
+    <!-- =========================================================
+         STYLESHEET
+    ========================================================== -->
 
     <link
         rel="stylesheet"
         href="style.css"
     >
 
+
+    <!-- =========================================================
+         FAVICON
+    ========================================================== -->
+
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23050708'/%3E%3Cpath d='M50 22c-7 0-13 7-13 16v13c0 8 6 14 13 14s13-6 13-14V38c0-9-6-16-13-16Zm-12 25L23 37m15 17L20 53m18 8L24 74m18-7L31 84m32-30 15-17M62 54l18-1M62 62l18 12M58 67l11 17' stroke='%2300e5ad' stroke-width='5' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='46' cy='37' r='2' fill='%23b8ffe8'/%3E%3Ccircle cx='54' cy='37' r='2' fill='%23b8ffe8'/%3E%3C/svg%3E"
+    >
+
 </head>
 
+<script>
+document.addEventListener(
+    "DOMContentLoaded",
+    function ()
+    {
+        const telegramButton =
+            document.getElementById("telegramButton");
 
+        if (telegramButton)
+        {
+            telegramButton.addEventListener(
+                "click",
+                function ()
+                {
+                    if (typeof fbq === "function")
+                    {
+                        fbq(
+                            "trackCustom",
+                            "TelegramClick",
+                            {
+                                destination: "VIP Spider Club"
+                            }
+                        );
+                    }
+                }
+            );
+        }
+    }
+);
+</script>
 <body>
 
+    <!-- Meta Pixel Noscript -->
+<noscript>
+    <img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=3423831294465206&ev=PageView&noscript=1"
+        alt=""
+    >
+</noscript>
+<!-- End Meta Pixel Noscript -->
 
-    <!-- =========================================
-         META PIXEL NOSCRIPT FALLBACK
-    ========================================== -->
+    <!-- =========================================================
+         ACCESSIBILITY / PAGE START
+    ========================================================== -->
 
-    <noscript>
-
-        <img
-            height="1"
-            width="1"
-            style="display:none"
-            src="https://www.facebook.com/tr?id=3423831294465206&ev=PageView&noscript=1"
-            alt=""
-        >
-
-    </noscript>
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
+        Skip to content
+    </a>
 
 
-    <!-- =========================================
-         BACKGROUND
-    ========================================== -->
+    <!-- =========================================================
+         BACKGROUND SYSTEM
+    ========================================================== -->
 
-    <div class="background">
+    <div
+        class="site-background"
+        aria-hidden="true"
+    >
+<div class="countdown" id="countdown">3</div>
+        <div class="aurora aurora-one"></div>
 
-        <div class="background-grid"></div>
+        <div class="aurora aurora-two"></div>
 
-        <div class="glow glow-one"></div>
+        <div class="aurora aurora-three"></div>
 
-        <div class="glow glow-two"></div>
-
-        <div class="glow glow-three"></div>
+        <div class="grid"></div>
 
         <div class="noise"></div>
+
+        <div class="vignette"></div>
 
     </div>
 
 
-    <!-- =========================================
-         MAIN PAGE
-    ========================================== -->
+    <!-- =========================================================
+         PAGE
+    ========================================================== -->
 
     <div class="page">
 
 
-        <!-- =====================================
-             HEADER
-        ====================================== -->
+        <!-- =====================================================
+             TOP NAVIGATION
+        ====================================================== -->
 
-        <header class="header">
+        <header class="topbar">
 
-            <div class="brand">
+            <a
+                href="#main-content"
+                class="brand"
+                aria-label="VIP Spider Club home"
+            >
 
-                <span class="brand-line"></span>
+                <span
+                    class="brand-mark"
+                    aria-hidden="true"
+                >
 
-                <span class="brand-name">
-                    VIP SPIDER CLUB
+                    <svg
+                        viewBox="0 0 32 32"
+                        fill="none"
+                    >
+
+                        <circle
+                            cx="16"
+                            cy="16"
+                            r="14"
+                            stroke="currentColor"
+                            stroke-width="1"
+                            opacity=".25"
+                        />
+
+                        <ellipse
+                            cx="16"
+                            cy="14"
+                            rx="5"
+                            ry="7"
+                            fill="currentColor"
+                            opacity=".9"
+                        />
+
+                        <circle
+                            cx="14.2"
+                            cy="12"
+                            r="1"
+                            fill="#07100d"
+                        />
+
+                        <circle
+                            cx="17.8"
+                            cy="12"
+                            r="1"
+                            fill="#07100d"
+                        />
+
+                        <path
+                            d="M11.5 12.5
+                               C8.5 10.5 6.5 9.5 4.5 9
+                               M11.2 15
+                               C7.8 14.5 5.5 14.5 3.5 15
+                               M11.5 17.5
+                               C8.2 18.2 6 19.5 4.5 21
+                               M20.5 12.5
+                               C23.5 10.5 25.5 9.5 27.5 9
+                               M20.8 15
+                               C24.2 14.5 26.5 14.5 28.5 15
+                               M20.5 17.5
+                               C23.8 18.2 26 19.5 27.5 21"
+                            stroke="currentColor"
+                            stroke-width="1.25"
+                            stroke-linecap="round"
+                        />
+
+                    </svg>
+
                 </span>
 
-                <span class="brand-line"></span>
+
+                <span class="brand-name">
+                    VIP SPIDER
+                </span>
+
+            </a>
+
+
+            <div
+                class="topbar-status"
+                aria-label="Channel status"
+            >
+
+                <span
+                    class="status-light"
+                    aria-hidden="true"
+                ></span>
+
+                <span>
+                    CHANNEL ACTIVE
+                </span>
 
             </div>
 
@@ -186,490 +371,1172 @@
 
 
 
-        <!-- =====================================
+        <!-- =====================================================
              MAIN CONTENT
-        ====================================== -->
+        ====================================================== -->
 
-        <main class="main">
-
-
-            <!-- =================================
-                 LIVE BADGE
-            ================================== -->
-
-            <div class="live-badge">
-
-                <span class="live-dot"></span>
-
-                <span class="live-text">
-                    OFFICIAL TELEGRAM COMMUNITY
-                </span>
-
-            </div>
+        <main
+            id="main-content"
+            class="main-content"
+        >
 
 
+            <!-- =================================================
+                 HERO SECTION
+            ================================================== -->
 
-            <!-- =================================
-                 SPIDER LOGO
-            ================================== -->
+            <section
+                class="hero"
+                aria-labelledby="hero-title"
+            >
 
-            <div class="logo-section">
 
-                <div class="logo-glow"></div>
+                <!-- LIVE BADGE -->
 
-                <div class="logo-ring">
+                <div class="live-pill">
 
-                    <div class="logo-inner">
+                    <span
+                        class="live-pulse"
+                        aria-hidden="true"
+                    ></span>
 
-                        <span class="spider-logo">
-                            🕷️
+                    <span>
+                        LIVE ON TELEGRAM
+                    </span>
+
+                    <span
+                        class="pill-divider"
+                        aria-hidden="true"
+                    ></span>
+
+                    <span class="pill-small">
+                        FREE ACCESS
+                    </span>
+
+                </div>
+
+
+
+                <!-- SPIDER EMBLEM -->
+
+                <div class="emblem-wrap">
+
+                    <div
+                        class="emblem-halo"
+                        aria-hidden="true"
+                    ></div>
+
+
+                    <div class="emblem">
+
+                        <svg
+                            viewBox="0 0 120 120"
+                            fill="none"
+                            role="img"
+                            aria-label="VIP Spider Club emblem"
+                        >
+
+                            <defs>
+
+                                <linearGradient
+                                    id="spiderBodyGradient"
+                                    x1="25"
+                                    y1="20"
+                                    x2="95"
+                                    y2="100"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+
+                                    <stop
+                                        offset="0"
+                                        stop-color="#00F5A0"
+                                    />
+
+                                    <stop
+                                        offset=".5"
+                                        stop-color="#00D9D0"
+                                    />
+
+                                    <stop
+                                        offset="1"
+                                        stop-color="#00AEEF"
+                                    />
+
+                                </linearGradient>
+
+
+                                <linearGradient
+                                    id="spiderLegGradient"
+                                    x1="10"
+                                    y1="20"
+                                    x2="110"
+                                    y2="100"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+
+                                    <stop
+                                        offset="0"
+                                        stop-color="#00F5A0"
+                                    />
+
+                                    <stop
+                                        offset="1"
+                                        stop-color="#00BCEB"
+                                    />
+
+                                </linearGradient>
+
+
+                                <radialGradient
+                                    id="emblemGlow"
+                                    cx="0"
+                                    cy="0"
+                                    r="1"
+                                    gradientUnits="userSpaceOnUse"
+                                    gradientTransform="translate(60 60) rotate(90) scale(55)"
+                                >
+
+                                    <stop
+                                        stop-color="#00E5AD"
+                                        stop-opacity=".16"
+                                    />
+
+                                    <stop
+                                        offset="1"
+                                        stop-color="#00E5AD"
+                                        stop-opacity="0"
+                                    />
+
+                                </radialGradient>
+
+                            </defs>
+
+
+                            <!-- INNER GLOW -->
+
+                            <circle
+                                cx="60"
+                                cy="60"
+                                r="54"
+                                fill="url(#emblemGlow)"
+                            />
+
+
+                            <!-- OUTER RINGS -->
+
+                            <circle
+                                cx="60"
+                                cy="60"
+                                r="50"
+                                stroke="#00F5A0"
+                                stroke-opacity=".20"
+                                stroke-width="1"
+                            />
+
+                            <circle
+                                cx="60"
+                                cy="60"
+                                r="43"
+                                stroke="#00D9D0"
+                                stroke-opacity=".13"
+                                stroke-width="1"
+                            />
+
+                            <circle
+                                cx="60"
+                                cy="60"
+                                r="36"
+                                stroke="#FFFFFF"
+                                stroke-opacity=".05"
+                                stroke-width="1"
+                            />
+
+
+                            <!-- SPIDER BODY -->
+
+                            <ellipse
+                                cx="60"
+                                cy="61"
+                                rx="12"
+                                ry="18"
+                                fill="url(#spiderBodyGradient)"
+                            />
+
+
+                            <!-- SPIDER HEAD -->
+
+                            <circle
+                                cx="60"
+                                cy="41"
+                                r="9"
+                                fill="url(#spiderBodyGradient)"
+                            />
+
+
+                            <!-- BODY DETAIL -->
+
+                            <path
+                                d="M60 51V72"
+                                stroke="#06110E"
+                                stroke-opacity=".45"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                            />
+
+
+                            <!-- LEFT LEGS -->
+
+                            <path
+                                d="
+                                M51 50
+                                C41 45 33 39 24 30
+
+                                M49 57
+                                C38 54 27 52 18 46
+
+                                M48 64
+                                C37 66 27 70 18 77
+
+                                M51 70
+                                C43 77 36 84 30 93
+                                "
+                                stroke="url(#spiderLegGradient)"
+                                stroke-width="4"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+
+
+                            <!-- RIGHT LEGS -->
+
+                            <path
+                                d="
+                                M69 50
+                                C79 45 87 39 96 30
+
+                                M71 57
+                                C82 54 93 52 102 46
+
+                                M72 64
+                                C83 66 93 70 102 77
+
+                                M69 70
+                                C77 77 84 84 90 93
+                                "
+                                stroke="url(#spiderLegGradient)"
+                                stroke-width="4"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+
+
+                            <!-- EYES -->
+
+                            <circle
+                                cx="56.5"
+                                cy="40"
+                                r="1.8"
+                                fill="#C7FFF0"
+                            />
+
+                            <circle
+                                cx="63.5"
+                                cy="40"
+                                r="1.8"
+                                fill="#C7FFF0"
+                            />
+
+                        </svg>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HERO COPY -->
+
+                <div class="hero-copy">
+
+                    <div class="eyebrow">
+                        YOUR NEXT MOVE STARTS HERE
+                    </div>
+
+
+                    <h1 id="hero-title">
+
+                        <span class="headline-main">
+                            Kuch Bada
+                        </span>
+
+                        <span class="headline-gradient">
+                            Karna Hai.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-text">
+
+                        Stay ahead with
+
+                        <strong>
+                            daily updates,
+                        </strong>
+
+                        timely analysis and exclusive content —
+
+                        <span>
+                            all in one place.
+                        </span>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- HERO TRUST POINTS -->
+
+                <div
+                    class="hero-points"
+                    aria-label="Community highlights"
+                >
+
+                    <div class="hero-point">
+
+                        <span
+                            class="point-icon"
+                            aria-hidden="true"
+                        >
+                            ✓
+                        </span>
+
+                        <span>
+                            Daily updates
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-point">
+
+                        <span
+                            class="point-icon"
+                            aria-hidden="true"
+                        >
+                            ✓
+                        </span>
+
+                        <span>
+                            Clear analysis
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-point">
+
+                        <span
+                            class="point-icon"
+                            aria-hidden="true"
+                        >
+                            ✓
+                        </span>
+
+                        <span>
+                            Free access
                         </span>
 
                     </div>
 
                 </div>
 
-            </div>
-
-
-
-            <!-- =================================
-                 HERO
-            ================================== -->
-
-            <section class="hero">
-
-                <p class="hero-small">
-                    EXCLUSIVE COMMUNITY ACCESS
-                </p>
-
-                <h1>
-
-                    Kuch
-                    <br>
-
-                    <span>
-                        Bada Karna Hai?
-                    </span>
-
-                </h1>
-
-
-                <p class="hero-description">
-
-                    Stay connected with exclusive updates,
-                    community content and everything happening
-                    inside VIP Spider Club.
-
-                </p>
-
             </section>
 
 
 
-            <!-- =================================
-                 FEATURE CARDS
-            ================================== -->
+            <!-- =================================================
+                 PRIMARY CTA
+            ================================================== -->
 
-            <section class="features">
-
-
-                <!-- FEATURE 1 -->
-
-                <div class="feature">
-
-                    <div class="feature-icon">
-
-                        <svg
-                            viewBox="0 0 24 24"
-                            width="22"
-                            height="22"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.7"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-
-                            <path d="M4 19V5"></path>
-
-                            <path d="M4 19H20"></path>
-
-                            <path d="M7 15L11 11L14 14L19 7"></path>
-
-                        </svg>
-
-                    </div>
-
-
-                    <div class="feature-content">
-
-                        <h3>
-                            Exclusive Updates
-                        </h3>
-
-                        <p>
-                            Stay updated with everything shared
-                            inside the community.
-                        </p>
-
-                    </div>
-
-
-                    <div class="feature-arrow">
-                        →
-                    </div>
-
-                </div>
-
-
-
-                <!-- FEATURE 2 -->
-
-                <div class="feature">
-
-                    <div class="feature-icon">
-
-                        <svg
-                            viewBox="0 0 24 24"
-                            width="22"
-                            height="22"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.7"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-
-                            <circle
-                                cx="12"
-                                cy="12"
-                                r="8"
-                            ></circle>
-
-                            <path d="M12 8V12L15 14"></path>
-
-                        </svg>
-
-                    </div>
-
-
-                    <div class="feature-content">
-
-                        <h3>
-                            Stay Ahead
-                        </h3>
-
-                        <p>
-                            Get access to updates and information
-                            directly through Telegram.
-                        </p>
-
-                    </div>
-
-
-                    <div class="feature-arrow">
-                        →
-                    </div>
-
-                </div>
-
-
-            </section>
-
-
-
-            <!-- =================================
-                 PRIMARY TELEGRAM CTA
-            ================================== -->
-
-            <a
-                href="https://t.me/VIPspiderclub"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="telegram-button"
-                id="telegramButton"
+            <section
+                class="cta-section"
+                aria-label="Join Telegram"
             >
 
+                <a
+                    href="https://t.me/VIPspiderclub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="primary-cta"
+                    aria-label="Join VIP Spider Club on Telegram"
+                >
 
-                <span class="button-shine"></span>
-
-
-                <!-- Telegram Icon -->
-
-                <span class="telegram-icon">
-
-                    <svg
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
+                    <span
+                        class="cta-icon"
                         aria-hidden="true"
                     >
 
-                        <path
+                        <svg
+                            viewBox="0 0 24 24"
                             fill="currentColor"
-                            d="M21.9 3.2L18.6 20c-.25 1.19-.9 1.48-1.82.92l-5.02-3.7-2.42 2.33c-.27.27-.5.5-1.02.5l.36-5.1 9.3-8.4c.4-.36-.09-.56-.62-.2L5.86 13.7.88 12.14c-1.08-.34-1.1-1.08.23-1.6L20.56 2.9c.9-.33 1.69.22 1.34.3Z"
-                        ></path>
+                        >
 
-                    </svg>
+                            <path
+                                d="
+                                M21.8 3.2
+                                L18.5 20
+                                C18.25 21.2 17.55 21.48 16.6 20.92
+                                L11.55 17.2
+                                L8.96 19.68
+                                C8.67 19.97 8.42 20.21 7.88 20.21
+                                L8.25 15.06
+                                L17.7 6.2
+                                C18.12 5.82 17.61 5.61 17.05 5.99
+                                L5.04 13.45
+                                L0.08 11.9
+                                C-1 11.56 -1.02 10.82 .31 10.3
+                                L20.1 2.87
+                                C21.01 2.53 21.82 3.09 21.8 3.2Z
+                                "
+                            />
 
-                </span>
+                        </svg>
 
-
-                <span class="button-text">
-
-                    Join VIP Spider Club
-
-                    <small>
-                        Open Telegram Channel
-                    </small>
-
-                </span>
-
-
-                <span class="button-arrow">
-                    →
-                </span>
-
-
-            </a>
-
+                    </span>
 
 
-            <!-- =================================
-                 SOCIAL PROOF
-            ================================== -->
+                    <span class="cta-copy">
 
-            <div class="social-proof">
+                        <span class="cta-main">
+                            JOIN TELEGRAM NOW
+                        </span>
+
+                        <span class="cta-sub">
+                            Enter the VIP Spider community
+                        </span>
+
+                    </span>
 
 
-                <div class="avatars">
+                    <span
+                        class="cta-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
 
-                    <div class="avatar">
-                        V
-                    </div>
 
-                    <div class="avatar">
-                        S
-                    </div>
+                    <span
+                        class="cta-shine"
+                        aria-hidden="true"
+                    ></span>
 
-                    <div class="avatar">
-                        C
-                    </div>
+                </a>
+
+
+                <div class="cta-note">
+
+                    <span
+                        class="secure-icon"
+                        aria-hidden="true"
+                    >
+                        ✦
+                    </span>
+
+                    <span>
+                        Free to join
+                    </span>
+
+                    <span
+                        class="note-dot"
+                        aria-hidden="true"
+                    >
+                        •
+                    </span>
+
+                    <span>
+                        No registration fee
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SOCIAL PROOF / TRUST STRIP
+            ================================================== -->
+
+            <section
+                class="trust-strip"
+                aria-label="Community information"
+            >
+
+                <div class="trust-item">
+
+                    <strong>
+                        DAILY
+                    </strong>
+
+                    <span>
+                        UPDATES
+                    </span>
 
                 </div>
 
 
-                <span class="proof-dot"></span>
+                <div
+                    class="trust-divider"
+                    aria-hidden="true"
+                ></div>
 
 
-                <span class="proof-text">
+                <div class="trust-item">
 
-                    Join the VIP community on Telegram
+                    <strong>
+                        FREE
+                    </strong>
 
-                </span>
+                    <span>
+                        ACCESS
+                    </span>
+
+                </div>
 
 
-            </div>
+                <div
+                    class="trust-divider"
+                    aria-hidden="true"
+                ></div>
+
+
+                <div class="trust-item">
+
+                    <strong>
+                        VIP
+                    </strong>
+
+                    <span>
+                        COMMUNITY
+                    </span>
+
+                </div>
+
+            </section>
 
 
 
-            <!-- =================================
-                 CHANNEL LINK
-            ================================== -->
+            <!-- =================================================
+                 BENEFITS
+            ================================================== -->
 
-            <a
-                href="https://t.me/VIPspiderclub"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="channel-link"
-                id="channelLink"
+            <section
+                class="benefits"
+                aria-labelledby="benefits-title"
             >
 
-                t.me/VIPspiderclub
+                <div class="section-heading">
 
-            </a>
+                    <span class="section-kicker">
+                        INSIDE THE CLUB
+                    </span>
+
+                    <h2 id="benefits-title">
+
+                        Everything you need.
+
+                        <span>
+                            Nothing unnecessary.
+                        </span>
+
+                    </h2>
+
+                    <p class="section-description">
+                        A simple place to stay connected with the
+                        information and updates that matter.
+                    </p>
+
+                </div>
+
+
+
+                <div class="benefit-grid">
+
+
+                    <!-- CARD 01 -->
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-top">
+
+                            <div
+                                class="benefit-icon"
+                                aria-hidden="true"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+
+                                    <path d="M4 19V5"></path>
+
+                                    <path d="M4 19H21"></path>
+
+                                    <path
+                                        d="M7 15L11 10L14 13L20 6"
+                                    ></path>
+
+                                </svg>
+
+                            </div>
+
+
+                            <span class="card-number">
+                                01
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Daily Updates
+                        </h3>
+
+
+                        <p>
+                            Important information and fresh
+                            updates shared throughout the day,
+                            all in one place.
+                        </p>
+
+
+                        <div
+                            class="card-line"
+                            aria-hidden="true"
+                        ></div>
+
+
+                        <span class="card-label">
+                            STAY INFORMED
+                        </span>
+
+                    </article>
+
+
+
+                    <!-- CARD 02 -->
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-top">
+
+                            <div
+                                class="benefit-icon"
+                                aria-hidden="true"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+
+                                    <path
+                                        d="M4 12H8L10 6L14 18L16 12H20"
+                                    ></path>
+
+                                </svg>
+
+                            </div>
+
+
+                            <span class="card-number">
+                                02
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Smart Analysis
+                        </h3>
+
+
+                        <p>
+                            Clear and easy-to-understand analysis
+                            designed to help you follow every
+                            important update.
+                        </p>
+
+
+                        <div
+                            class="card-line"
+                            aria-hidden="true"
+                        ></div>
+
+
+                        <span class="card-label">
+                            THINK CLEAR
+                        </span>
+
+                    </article>
+
+
+
+                    <!-- CARD 03 -->
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-top">
+
+                            <div
+                                class="benefit-icon"
+                                aria-hidden="true"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+
+                                    <path
+                                        d="M18 8A6 6 0 0 0 6 8C6 15 3 15 3 18H21C21 15 18 15 18 8"
+                                    ></path>
+
+                                    <path
+                                        d="M10 21H14"
+                                    ></path>
+
+                                </svg>
+
+                            </div>
+
+
+                            <span class="card-number">
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Never Miss Out
+                        </h3>
+
+
+                        <p>
+                            Stay connected with the channel and
+                            catch the updates that matter without
+                            unnecessary noise.
+                        </p>
+
+
+                        <div
+                            class="card-line"
+                            aria-hidden="true"
+                        ></div>
+
+
+                        <span class="card-label">
+                            STAY CONNECTED
+                        </span>
+
+                    </article>
+
+
+
+                    <!-- CARD 04 -->
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-top">
+
+                            <div
+                                class="benefit-icon"
+                                aria-hidden="true"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+
+                                    <path
+                                        d="M16 21V19C16 16.79 14.21 15 12 15H6C3.79 15 2 16.79 2 19V21"
+                                    ></path>
+
+                                    <circle
+                                        cx="9"
+                                        cy="7"
+                                        r="4"
+                                    ></circle>
+
+                                    <path
+                                        d="M22 21V19C21.99 17.17 20.76 15.57 19 15.1"
+                                    ></path>
+
+                                    <path
+                                        d="M16 3.13C17.76 3.59 18.99 5.18 19 7C19 8.82 17.76 10.41 16 10.87"
+                                    ></path>
+
+                                </svg>
+
+                            </div>
+
+
+                            <span class="card-number">
+                                04
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            VIP Community
+                        </h3>
+
+
+                        <p>
+                            A focused community built around
+                            information, discussion and regular
+                            updates.
+                        </p>
+
+
+                        <div
+                            class="card-line"
+                            aria-hidden="true"
+                        ></div>
+
+
+                        <span class="card-label">
+                            JOIN THE CLUB
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 HOW IT WORKS
+            ================================================== -->
+
+            <section
+                class="steps"
+                aria-labelledby="steps-title"
+            >
+
+                <div class="section-heading compact">
+
+                    <span class="section-kicker">
+                        SIMPLE BY DESIGN
+                    </span>
+
+                    <h2 id="steps-title">
+
+                        Three steps.
+
+                        <span>
+                            That's it.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+
+                <div class="step-list">
+
+
+                    <!-- STEP 01 -->
+
+                    <div class="step">
+
+                        <div
+                            class="step-number"
+                            aria-hidden="true"
+                        >
+                            01
+                        </div>
+
+
+                        <div class="step-content">
+
+                            <h3>
+                                Tap the button
+                            </h3>
+
+                            <p>
+                                Open the official VIP Spider
+                                Telegram channel.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 02 -->
+
+                    <div class="step">
+
+                        <div
+                            class="step-number"
+                            aria-hidden="true"
+                        >
+                            02
+                        </div>
+
+
+                        <div class="step-content">
+
+                            <h3>
+                                Join the community
+                            </h3>
+
+                            <p>
+                                Join directly through Telegram
+                                with one simple tap.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 03 -->
+
+                    <div class="step">
+
+                        <div
+                            class="step-number"
+                            aria-hidden="true"
+                        >
+                            03
+                        </div>
+
+
+                        <div class="step-content">
+
+                            <h3>
+                                Stay updated
+                            </h3>
+
+                            <p>
+                                Follow the latest updates and
+                                analysis in one place.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FINAL CTA
+            ================================================== -->
+
+            <section
+                class="final-cta"
+                aria-labelledby="final-title"
+            >
+
+                <div
+                    class="final-glow"
+                    aria-hidden="true"
+                ></div>
+
+
+                <div class="final-content">
+
+                    <span class="final-kicker">
+                        YOUR NEXT MOVE
+                    </span>
+
+
+                    <h2 id="final-title">
+
+                        Ready to
+
+                        <span>
+                            stay ahead?
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        Join VIP Spider Club on Telegram
+                        and stay connected.
+                    </p>
+
+
+                    <a
+                        href="https://t.me/VIPspiderclub"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="final-button"
+                        aria-label="Join VIP Spider Club"
+                    >
+
+                        <span>
+                            JOIN VIP SPIDER
+                        </span>
+
+                        <span
+                            aria-hidden="true"
+                        >
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INFORMATION NOTICE
+            ================================================== -->
+
+            <section class="disclaimer">
+
+                <div class="disclaimer-heading">
+
+                    <span
+                        class="disclaimer-line"
+                        aria-hidden="true"
+                    ></span>
+
+                    <span>
+                        INFORMATION NOTICE
+                    </span>
+
+                    <span
+                        class="disclaimer-line"
+                        aria-hidden="true"
+                    ></span>
+
+                </div>
+
+
+                <p>
+                    VIP Spider Club provides information,
+                    statistics, updates and analysis for
+                    educational and informational purposes only.
+                    Information may change and no outcome is
+                    guaranteed. Please make independent and
+                    responsible decisions.
+                </p>
+
+            </section>
 
 
         </main>
 
 
 
-        <!-- =====================================
+        <!-- =====================================================
              FOOTER
-        ====================================== -->
+        ====================================================== -->
 
         <footer class="footer">
 
-            <div class="footer-line"></div>
 
-            <div class="footer-content">
+            <div class="footer-brand">
 
-                <span>
-                    VIP SPIDER CLUB
-                </span>
-
-                <span class="footer-dot">
-                    •
+                <span
+                    class="footer-spider"
+                    aria-hidden="true"
+                >
+                    🕷
                 </span>
 
                 <span>
-                    TELEGRAM COMMUNITY
+                    VIP SPIDER
                 </span>
 
             </div>
+
+
+            <div class="footer-copy">
+
+                © 2026 VIP Spider Club
+
+            </div>
+
+
+            <div class="footer-link">
+
+                <a
+                    href="https://t.me/VIPspiderclub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open VIP Spider Club Telegram"
+                >
+                    t.me/VIPspiderclub
+                </a>
+
+            </div>
+
 
         </footer>
 
 
     </div>
 
+<div class="redirect-status">
 
+    <p>Redirecting to Telegram in</p>
 
-    <!-- =========================================
-         TELEGRAM CLICK TRACKING
-    ========================================== -->
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
 
-    <script>
+    <div class="countdown" id="countdown">
+        3
+    </div>
 
-        /*
-        ==========================================
-        TRACK TELEGRAM BUTTON CLICK
-        ==========================================
-        */
+</div>
+    <!-- =========================================================
+         OPTIONAL JAVASCRIPT
+    ========================================================== -->
 
-        document.addEventListener(
-            "DOMContentLoaded",
-            function ()
-            {
-
-                const telegramButton =
-                    document.getElementById(
-                        "telegramButton"
-                    );
-
-
-                const channelLink =
-                    document.getElementById(
-                        "channelLink"
-                    );
-
-
-                /*
-                --------------------------------------
-                MAIN TELEGRAM BUTTON
-                --------------------------------------
-                */
-
-                if (telegramButton)
-                {
-
-                    telegramButton.addEventListener(
-                        "click",
-                        function ()
-                        {
-
-                            /*
-                            Meta Pixel Custom Event
-                            */
-
-                            if (
-                                typeof fbq === "function"
-                            )
-                            {
-
-                                fbq(
-                                    "trackCustom",
-                                    "TelegramClick",
-                                    {
-                                        destination:
-                                            "VIP Spider Club"
-                                    }
-                                );
-
-                            }
-
-
-                            /*
-                            Google Analytics compatible event
-                            if added later
-                            */
-
-                            if (
-                                typeof gtag === "function"
-                            )
-                            {
-
-                                gtag(
-                                    "event",
-                                    "telegram_click",
-                                    {
-                                        event_category:
-                                            "engagement",
-
-                                        event_label:
-                                            "VIP Spider Club"
-                                    }
-                                );
-
-                            }
-
-                        }
-                    );
-
-                }
-
-
-
-                /*
-                --------------------------------------
-                CHANNEL LINK CLICK
-                --------------------------------------
-                */
-
-                if (channelLink)
-                {
-
-                    channelLink.addEventListener(
-                        "click",
-                        function ()
-                        {
-
-                            if (
-                                typeof fbq === "function"
-                            )
-                            {
-
-                                fbq(
-                                    "trackCustom",
-                                    "TelegramClick",
-                                    {
-                                        destination:
-                                            "VIP Spider Club"
-                                    }
-                                );
-
-                            }
-
-                        }
-                    );
-
-                }
-
-            }
-        );
-
-    </script>
-
-
-    <!-- =========================================
-         OPTIONAL EXTERNAL JAVASCRIPT
-         Keep this if your project already uses it
-    ========================================== -->
-
-    <script src="script.js"></script>
-
-
+<script src="redirect.js"></script>
 </body>
-
 </html>
